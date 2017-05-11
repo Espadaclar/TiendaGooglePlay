@@ -8,12 +8,10 @@
 public class Producto
 {
     private String name;
-    private double precio;
     private int vecesVendido;
 
     public Producto(String name){
         this.name = name;   
-        this.precio = precio;
         vecesVendido = 0;
     }
     
@@ -21,9 +19,9 @@ public class Producto
     public String getName(){
         return name;
     }
-    
-    public double getPrecio(){
-        return precio;
+ 
+   public double getPrecio(){
+       return 0;
     }
     
     public int getVecesVendido(){

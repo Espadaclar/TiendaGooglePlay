@@ -3,7 +3,7 @@
  */
 public class Aplicacion extends Producto{
      private double espacioQueOcupa;
-     public Categoria categoria;
+     private Categoria categoria;
 
     public Aplicacion(String name, double espacioQueOcupa,  Categoria categoria) {
         super(name);
