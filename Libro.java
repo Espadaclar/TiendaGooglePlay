@@ -20,7 +20,15 @@ class Libro extends ProductoMultimedia{
         return sonDeFiccion;
     }
 
-   
+    @Override
+    public  double getPrecio(){
+        double precio = 0;
+        precio = (numPaginas / 100) * (getAno() - 2010);
+        if(precio < 0){
+            precio = precio * (-1);
+        }
+        return precio;
+    }
     
     @Override
     public String toString() {

@@ -7,8 +7,6 @@ import java.util.ArrayList;
 class GooglePlay {
     private ArrayList<Usuario> usuario;
     private ArrayList<Producto> producto;
-    private Pelicula pelicula;
-    private Libro libro;
 
     public GooglePlay(){
         usuario = new ArrayList<>();;
@@ -37,13 +35,13 @@ class GooglePlay {
             if(usu.getNombreCuenta().equals(usuar) ){
                 for(Producto produc: producto){
                     if(produc.getName().equals(nameProducto)){
-                    precio = produc.getPrecio();
-                }
+                        precio = produc.getPrecio();
+                        produc.aumentarVecesVendido();
+                    }
                 }
             }
         }
         return precio;
     }
 }
-
 

@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Producto
+public abstract class Producto
 {
     private String name;
     private int vecesVendido;
@@ -20,11 +20,13 @@ public class Producto
         return name;
     }
  
-   public double getPrecio(){
-       return 0;
-    }
+   public abstract double getPrecio();
     
     public int getVecesVendido(){
         return vecesVendido;
+    }
+    
+    public void aumentarVecesVendido(){
+         vecesVendido ++;
     }
 }

@@ -17,7 +17,15 @@ class ProductoMultimedia extends Producto{
     public int getAno() {
         return anioCreacio;
     }
-
+    
+    /**
+     * no hace falta sobreescribir este mt, (como copilaría, ponemos la c)a calse como abstrattral
+     */
+     public  double getPrecio(){
+         double precio = 0;
+        return precio;
+    }
+    
     @Override
     public String toString() {
         String datos = "";

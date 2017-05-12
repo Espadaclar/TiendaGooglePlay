@@ -18,6 +18,22 @@ class Pelicula extends ProductoMultimedia{
         return duracion;
     }
 
+    @Override
+    public  double getPrecio(){
+         double precio = 0;
+        if(getCalidad().equals("FullHD")){
+            precio = 10;
+        }
+        else if(getCalidad().equals("HD")){
+            precio = 5;
+        }
+        
+        if(getAno() < 2000){
+            precio = precio /2;
+        }
+        return precio;
+    }
+    
     public String getCalidad() {
         String calidad = "FullHD";
         if(calidadFull != 1080){

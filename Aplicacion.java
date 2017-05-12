@@ -11,8 +11,6 @@ public class Aplicacion extends Producto{
         this.categoria = categoria;
     }
 
-
-
     public double getTamanoEnMB() {
         return espacioQueOcupa;
     }
@@ -43,6 +41,28 @@ public class Aplicacion extends Producto{
         return getName();
     }
 
+    
+    public  double getPrecio(){
+        double precio = -1;
+        if(getVecesVendido() >= 2){
+            if(getCategoria().equals("Juegos")){
+                precio = 5;
+            }
+            else if(getCategoria().equals("Comunicaciones")){
+                precio = 2;
+            }
+            else if(getCategoria().equals("Productividad")){
+                precio = 10;
+            }
+            else if(getCategoria().equals("Multimedia")){
+                precio = 2;
+            }
+        }
+        else{
+            precio = 0.99;
+        }
+        return precio;
+    }
     @Override
     public String toString() {
         String datos ="";
